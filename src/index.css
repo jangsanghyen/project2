@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --main-bg-color: #574b8a;
+  --main-button-text-color: #2b66ff;
+  --main-gray: #ccc;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+h2 {
+  border-bottom: 1px solid var(--main-gray);
+  padding: 5px 0;
+}
+
+h3 {
+  margin: 0;
+  padding: 1em 0;
+}
+
+img {
+  user-select: none;
+  pointer-events: none;
+}
+
+.hidden {
+  display: none;
+}
+
+/* buttons */
+
+button {
+  padding: 1rem;
+  border: 2px solid transparent;
+  border-radius: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--main-button-text-color);
+}
+
+button.btn-primary {
+  background-color: var(--main-button-text-color);
+  font-weight: bold;
+  color: white;
+}
+
+button:hover {
+  border: 2px solid var(--main-gray);
+}
+
+.action-btns {
+  display: flex;
+}
+
+.action-btns button {
+  flex: 1;
+  margin: 0 0 0 0.3rem;
+}
+
+
+/* tab */
+
+.tabbar {
+  flex: 0 0 4rem;
+  display: flex;
+}
+
+.tabbar > button {
+  flex: 1;
+  border-radius: 0;
+  padding: 0;
+  color: var(--main-bg-color);
+
+}
+
+.tabbar > button > img {
+  width: 25px;
+  height: 25px;
+}
+
+.tabbar > button.active {
+  font-weight: bold;
+  color: var(--main-button-text-color);
+}
+
+.tabbar > button.active > img {
+  filter: invert(30%) sepia(50%) saturate(5665%) hue-rotate(221deg) brightness(106%) contrast(101%);
+}
+
+.tab {
+  flex: 1;
+  max-height: calc(100vh - 28pt);
+  overflow: auto;
+}
+
+/* app default */
+
+.app {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+}
+
+/* headers */
+
+.app > header, .tab > header {
+  text-align: center;
+  flex: 0 0 3rem;
+  background-color: var(--main-bg-color);
+  color: white;
+}
+
+/* pages */
+
+.page {
+  padding: 1rem;
+}
